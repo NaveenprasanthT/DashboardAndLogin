@@ -1,0 +1,20 @@
+.homeWrap{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px auto;
+}
+
+.navbar{
+}
+
+.homeMain{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+
+.slider{
+}
+
+.rightSide{
+
+}
