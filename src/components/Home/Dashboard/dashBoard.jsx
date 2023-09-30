@@ -3,7 +3,7 @@ import './dashboard.css';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { BiSortAlt2 } from 'react-icons/bi';
 
-const DashBoard = () => {
+const DashBoard = ({setUpload}) => {
 
     const [active, setActive] = useState('publish');
 
@@ -75,7 +75,7 @@ const DashBoard = () => {
         <div className='wrap'>
             <div className='content'>
                 <h1>MY CONTENT</h1>
-                <button>New Content</button>
+                <button onClick={() => setUpload(true)}>New Content</button>
             </div>
             <div className='container'>
                 <div className='options'>
