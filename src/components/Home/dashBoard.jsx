@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './dashboard.css';
+import '../../styles/dashboard/dashboard.css';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { BiSortAlt2 } from 'react-icons/bi';
 

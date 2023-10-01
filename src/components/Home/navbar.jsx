@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../../Assets/aictec.png';
-import profile from '../../../Assets/picture.png';
+import logo from '../../Assets/aictec.png';
+import profile from '../../Assets/picture.png';
 import { IoNotifications } from 'react-icons/io5';
 import { IoIosArrowDown } from 'react-icons/io';
 import { BiMenuAltRight } from 'react-icons/bi';
-import './navbar.css';
+import '../../styles/dashboard/navbar.css';
 
 const Navbar = ({navbar, setNavbar}) => {
 

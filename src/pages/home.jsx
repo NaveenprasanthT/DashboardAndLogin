@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './home.css';
-import Navbar from '../../components/Home/Navbar/navbar';
-import Sidebar from '../../components/Home/Sidebar/sidebar';
-import DashBoard from '../../components/Home/Dashboard/dashBoard';
-import Upload from '../../components/Home/Upload/upload';
+import '../styles/home.css';
+import Navbar from '../components/Home/navbar';
+import Sidebar from '../components/Home/sidebar';
+import DashBoard from '../components/Home/dashBoard';
+import Upload from '../components/Home/upload';
 
 const Home = () => {
 

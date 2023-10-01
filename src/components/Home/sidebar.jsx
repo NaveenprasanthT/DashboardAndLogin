@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './sidebar.css';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { BsPlusCircle, BsDisplay, BsPcDisplay } from 'react-icons/bs';
 import { TbNotes } from 'react-icons/tb';
@@ -8,7 +7,7 @@ import { AiOutlineCloseCircle, AiOutlineYoutube } from 'react-icons/ai';
 import { SlLocationPin } from 'react-icons/sl';
 import { GrScheduleNew } from 'react-icons/gr';
 import { IoLogOutOutline } from 'react-icons/io5';
-import './sidebar.css';
+import '../../styles/dashboard/sidebar.css';
 import { Link } from 'react-router-dom';
 
 const Sidebar = ({ setNavbar }) => {

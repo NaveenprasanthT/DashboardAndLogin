@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './upload.css';
+import '../../styles/dashboard/upload.css';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { PiUploadSimpleBold } from 'react-icons/pi';
 import { RiDeleteBin6Line } from 'react-icons/ri';

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import logo from '../../Assets/logo.png';
+import logo from '../Assets/logo.png';
 import { HiOutlineUser, HiOutlineEye } from 'react-icons/hi';
 import { HiOutlineEyeSlash } from 'react-icons/hi2';
 import { RiLockPasswordLine } from 'react-icons/ri';
-import { useNavigate } from "react-router-dom";import './login.css';
+import { useNavigate } from "react-router-dom";
+import '../styles/login.css';
 
 const Login = () => {
 
@@ -46,8 +47,8 @@ const Login = () => {
                         <label><span><RiLockPasswordLine /></span><p>Password</p></label>
                         <input
                             type={showPassword ? 'text' : "password"}
-                            name='password' value={formData.password} onChange={handleInputChange}
-                            inputMode="none"
+                            name='password' value={formData.password} 
+                            onChange={handleInputChange}
                         />
                         <div className='showPassword' onClick={() => setShowPassword(!showPassword)}><span>{ showPassword ? <HiOutlineEyeSlash /> : <HiOutlineEye />}</span></div>
                     </div>
