@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './sidebar.css';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { BsPlusCircle, BsDisplay, BsPcDisplay } from 'react-icons/bs';
 import { TbNotes } from 'react-icons/tb';
 import { MdModeEdit } from 'react-icons/md';
-import { AiOutlineYoutube } from 'react-icons/ai';
+import { AiOutlineCloseCircle, AiOutlineYoutube } from 'react-icons/ai';
 import { SlLocationPin } from 'react-icons/sl';
 import { GrScheduleNew } from 'react-icons/gr';
+import { IoLogOutOutline } from 'react-icons/io5';
 import './sidebar.css';
+import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = ({ setNavbar }) => {
+
+    const [active, setActive] = useState('My Content');
 
     const content = [
         {
@@ -51,24 +55,30 @@ const Sidebar = () => {
 
     return (
         <div className='SidebarWrap'>
-            <div className='menuOption'>
-                <h2>Home</h2>
-                <div className='menu'><span><BiHomeAlt2 /></span><p>Dashboard</p></div>
+            <div className='closeSlider'><span onClick={() => setNavbar(false)}><AiOutlineCloseCircle /></span></div>
+            <div className='SidebarContainer'>
+                <div className='menuOption'>
+                    <h2>Home</h2>
+                    <div className='menu'><span><BiHomeAlt2 /></span><p>Dashboard</p></div>
+                </div>
+                <div className='menuOption'>
+                    <h2>Content Management</h2>
+                    {content.map((item, id) => (
+                        <div key={id} className='menu' onClick={() => setActive(item.value)} id={active === item.value ? 'active' : ''}><span>{item.icons}</span><p>{item.value}</p></div>
+                    ))}
+                </div>
+                <div className='menuOption'>
+                    <h2>Display Management</h2>
+                    {display.map((item, id) => (
+                        <div key={id} className='menu' onClick={() => setActive(item.value)} id={active === item.value ? 'active' : ''}><span>{item.icons}</span><p>{item.value}</p></div>
+                    ))}
+                </div>
             </div>
-            <div className='menuOption'>
-                <h2>Content Management</h2>
-                {content.map((item, id) => (
-                    <div key={id} className='menu'><span>{item.icons}</span><p>{item.value}</p></div>
-                ))}
-            </div>
-            <div className='menuOption'>
-                <h2>Display Management</h2>
-                {display.map((item, id) => (
-                    <div key={id} className='menu'><span>{item.icons}</span><p>{item.value}</p></div>
-                ))}
-            </div>
+            <Link to='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className='logout'><span><IoLogOutOutline /></span><p>Logout</p></div>
+            </Link>
         </div>
     )
 }
 
-export default Sidebar
+export default Sidebar;

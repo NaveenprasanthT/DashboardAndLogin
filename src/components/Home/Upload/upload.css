@@ -5,8 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff1e;
-    backdrop-filter: blur(2px);
+    background-color: #0000002e;
     z-index: 10;
 }
 
@@ -15,8 +14,7 @@
     background-color: #fff;
     width: 40%;
     padding: 20px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .close {
@@ -33,22 +31,22 @@
 
 .stage1 p {
     font-size: 12px;
-    margin-top: 1%;
+    margin-top: 2%;
     color: #484848;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
-    margin: 7% 10%;
+    margin: 7% 20%;
     gap: 0.5rem;
 }
 
 .buttons button {
-    border: 1px solid green;
+    border: 1px solid rgb(0, 175, 0);
     background-color: transparent;
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 15px;
     cursor: pointer;
 }
 
@@ -67,4 +65,170 @@
 
 .center span {
 
+}
+
+/* Stage 2 */
+
+.stage2{
+    position: relative;
+    max-height: 95vh;
+    overflow: scroll;
+    width: 50%;
+    background-color: #fff;
+    padding:3%;
+}
+
+.stage2::-webkit-scrollbar{
+    display: none;
+}
+
+.stage2 h4{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stage2Form{
+    padding: 3% 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.stage2Form label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #656565;
+    display: flex;
+}
+
+.stage2Form label span{
+    color: red;
+}
+
+.fileUpload{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow: hidden;
+}
+
+.uploading{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 90% auto;
+}
+
+.uploading img{
+    width: 100%;
+    height: inherit;
+    object-fit: cover;
+}
+
+.upload{
+    border-radius: 5px;
+    border: 1.5px dashed #b7b7b7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload span{
+    font-size: 35px;
+}
+
+.upload label{
+    font-size: 13px;
+    color: rgb(0, 110, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.upload p{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.remove{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove span{
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remove p{
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.inputMenu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputMenu input{
+    width: 90%;
+    outline: none;
+    border-radius: 3px;
+    height: 40px;
+    border: 1.5px solid #bbbbbb;
+}
+
+.stage2buttons{
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    gap: 3rem;
+    margin-top: 3%;
+}
+
+.stage2buttons button:nth-child(1){
+    width: 100px;
+    height: 35px;
+    border: 1px solid #000;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.stage2buttons button:nth-child(2){
+    width: 100px;
+    height: 35px;
+    background-color: rgb(6, 169, 6);
+    color: #fff;
+    border-radius: 3px;
+    border: 1.5px solid rgb(6, 169, 6);
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .stage1 {
+        width: 60%;
+    }
+    .stage2{
+        width: 75%;
+    }
+}
+
+@media (max-width: 550px) {
+    .stage1 {
+        width: 80%;
+    }
+    .buttons {
+        margin: 5%;
+    }
+    .stage2{
+        width: 85%;
+    }
 }

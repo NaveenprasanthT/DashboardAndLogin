@@ -3,7 +3,7 @@ import './dashboard.css';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { BiSortAlt2 } from 'react-icons/bi';
 
-const DashBoard = ({setUpload}) => {
+const DashBoard = ({ setUpload }) => {
 
     const [active, setActive] = useState('publish');
 
@@ -68,7 +68,7 @@ const DashBoard = ({setUpload}) => {
             size: '2mb'
         },
     ];
-    
+
     const dispaly = active === 'publish' ? published : draft;
 
     return (

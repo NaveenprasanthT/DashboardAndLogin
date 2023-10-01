@@ -1,4 +1,4 @@
-.navbarWrap{
+.navbarWrap {
     height: 95%;
     overflow: hidden;
     display: grid;
@@ -6,19 +6,19 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.logoWrap{
+.logoWrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.logoWrap img{
+.logoWrap img {
     object-fit: contain;
-    height: 40px;
-    width: 150px;
+    height: 35px;
+    width: 130px;
 }
 
-.navbarRight{
+.navbarRight {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,25 +26,24 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.time{
+.time {}
+
+.time p {
+    font-size: 12px;
 
 }
 
-.time p{
-    font-size: 14px;
-}
-
-.profileContainer{
+.profileContainer {
     display: flex;
     align-items: center;
 }
 
-.profileContainer span{
+.profileContainer span {
     display: flex;
     cursor: pointer;
 }
 
-.profile{
+.profile {
     display: flex;
     gap: 0.7rem;
 
@@ -52,21 +51,22 @@
     margin-right: 10px;
 }
 
-.profileImage{
+.profileImage {
     position: relative;
     height: 40px;
-    width: 40px; 
+    width: 40px;
+    overflow: hidden;
 }
 
-.profileImage img{
+.profileImage img {
     height: inherit;
     width: inherit;
     object-fit: cover !important;
     object-position: center;
-    border-radius: 50%;   
+    border-radius: 50%;
 }
 
-.absolute{
+.absolute {
     width: 10px;
     height: 10px;
     position: absolute;
@@ -78,16 +78,56 @@
     border: 1px solid #fff;
 }
 
-.textContainer{
+.textContainer {}
 
-}
-
-.textContainer h4{
+.textContainer h4 {
     font-size: 14px;
     font-weight: 500;
 }
 
-.textContainer p{
+.textContainer p {
     font-size: 11px;
     color: #000000e1;
+}
+
+.phoneView {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phoneView span {
+    display: flex;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .navbarWrap {
+        grid-template-columns: 25% auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarWrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbarRight {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .phoneView {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .phoneView {
+        width: 15%;
+    }
 }

@@ -14,7 +14,7 @@
 }
 
 .content h1{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -24,14 +24,14 @@
     color: #fff;
     font-size: 12px;
     font-weight: 500;
-    padding: 5px 15px;
+    padding: 7px 15px;
     border-radius: 4px;
     background-color: rgb(0, 150, 0);
     cursor: pointer;
 }
 
 .container{
-    padding: 3% 5%;
+    padding: 3% 0%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -40,6 +40,7 @@
 .options{
     display: flex;
     gap: 3rem;
+    padding: 0 5%;
 }
 
 .options p{
@@ -48,34 +49,58 @@
     cursor: pointer;
 }
 
+
 .entries{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .header, .data{
-    font-size: 14px;
-    padding: 7px 0;
+    padding: 7px 5%;
+    font-size: 12px;
     display: grid;
     grid-template-columns: repeat(4,2fr) 1fr;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;}
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
 
 .header li{
     display: flex;
     gap: 0.1rem;
     color: #707070;
+    list-style: none;
 }
 
 .header li span{
-    font-size: 18px;
-    color: #707070;
+    font-size: 16px;
+    color:#848484;
+    cursor: pointer;
 }
 
 .data li{
-    
+    list-style: none;
 }
 
 .data li:last-child span{
     cursor: pointer;
+}
+
+@media (max-width: 550px) {
+
+    .entries{
+        overflow: scroll;
+    }
+
+    .header, .data{
+        display: flex;
+    }
+
+    .header li, .data li{
+        min-width: 150px;
+    }
+
+    .header li:nth-child(2), .data li:nth-child(2), .header li:last-child, .data li:last-child{
+        min-width: 70px;
+    }
 }

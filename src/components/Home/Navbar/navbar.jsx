@@ -3,9 +3,10 @@ import logo from '../../../Assets/aictec.png';
 import profile from '../../../Assets/picture.png';
 import { IoNotifications } from 'react-icons/io5';
 import { IoIosArrowDown } from 'react-icons/io';
+import { BiMenuAltRight } from 'react-icons/bi';
 import './navbar.css';
 
-const Navbar = () => {
+const Navbar = ({navbar, setNavbar}) => {
 
     var [date, setDate] = useState(new Date());
     useEffect(() => {
@@ -15,6 +16,10 @@ const Navbar = () => {
         }
     });
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        setNavbar(!navbar)
+    }
 
     return (
         <div className='navbarWrap'>
@@ -40,6 +45,9 @@ const Navbar = () => {
                     </div>
                     <span><IoIosArrowDown /></span>
                 </div>
+            </div>
+            <div className='phoneView'>
+                <span onClick={handleClick}><BiMenuAltRight /></span>
             </div>
         </div>
     )
